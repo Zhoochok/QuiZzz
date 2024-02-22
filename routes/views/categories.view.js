@@ -2,10 +2,10 @@ const router = require('express').Router();
 const { Category } = require('../../db/models');
 const CategoriesPage = require('../../components/CategoriesPage');
 
-router.get('/categories', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const categories = await Category.findAll();
-    const document = res.renderComponent(CategoriesPage, { title, categories });
+    const document = res.renderComponent(CategoriesPage, { title:'cat', categories });
     res.send(document);
   } catch ({ message }) {
     res.status(500).json({ error: message });
