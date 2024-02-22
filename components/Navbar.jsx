@@ -2,7 +2,7 @@ const React = require('react');
 
 function Navbar({ user }) {
   return (
-    <nav>
+    <nav user={user}>
       <div class='nav-wrapper'>
         <a href='#' class='brand-logo'>
           Logo
@@ -12,10 +12,10 @@ function Navbar({ user }) {
             <a href='/'>main</a>
           </li>
           <li>
-            <a href='/category'>category</a>
+            <a href='/categories'>category</a>
           </li>
           <li>
-            <a href='/auth/registration'>sign-up</a>
+            <a href='/registration'>sign-up</a>
           </li>
         </ul>
       </div>

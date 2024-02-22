@@ -5,7 +5,7 @@ function Registration({ title }) {
   return (
     <Layout title={title}>
       <h1 className='headline'>Регистрация</h1>
-      <form className="registration" action="/registration" method="POST">
+      <form className="registration" action="/api/registration" method="POST">
         <input type="text" name="name" placeholder="Имя" />
         <input type="email" name="email" placeholder="email" />
         <input type="password" name="password" placeholder="Пароль" />
