@@ -5,11 +5,16 @@ const classRouter = require('./views/categories.view');
 const authRouter = require('../routes/views/auth.view');
 // const prizeRouter = require('./views/prizes.view');
 
+const authApiRouter = require('./api/auth.api.router');
+
 //rout views
 router.use('/', mainRouter);
 router.use('/categories', classRouter);
 // router.use('/prizes', prizeRouter);
 router.use('/registration', authRouter);
+
+//api
+router.use('/api', authApiRouter)
 
 
 module.exports = router;
