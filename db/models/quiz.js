@@ -7,8 +7,8 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
+    static associate({ Category }) {
+      this.belongsTo(Category, { foreignKey: 'categoryId' });
     }
   }
   Quiz.init(
@@ -25,6 +25,9 @@ module.exports = (sequelize, DataTypes) => {
       },
       question: {
         allowNull: false,
+        type: DataTypes.TEXT,
+      },
+      image: {
         type: DataTypes.TEXT,
       },
       answer: {

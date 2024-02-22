@@ -23,6 +23,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT,
       },
+      image: {
+        type: Sequelize.TEXT,
+      },
       answer: {
         allowNull: false,
         type: Sequelize.TEXT,
