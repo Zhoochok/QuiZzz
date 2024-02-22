@@ -1,41 +1,41 @@
 'use strict';
 const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Quiz extends Model {
+  class Otvet extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate({ Category, Otvet }) {
-      this.belongsTo(Category, { foreignKey: 'categoryId' });
-      this.hasMany(Otvet, { foreignKey: 'voprosId' });
+    static associate({ Otvet }) {
+      this.belongsTo(Otvet, { foreignKey: 'voprosId' });
     }
   }
-  Quiz.init(
+  Otvet.init(
     {
-      categoryId: {
+      voprosId: {
         allowNull: false,
         type: DataTypes.INTEGER,
         references: {
-          model: 'Categories',
+          model: 'Quizzes',
           key: 'id',
         },
         onDelete: 'cascade',
         onUpdate: 'cascade',
       },
-      question: {
+      name: {
         allowNull: false,
         type: DataTypes.TEXT,
       },
-      image: {
-        type: DataTypes.TEXT,
+      isRight: {
+        allowNull: false,
+        type: DataTypes.BOOLEAN,
       },
     },
     {
       sequelize,
-      modelName: 'Quiz',
+      modelName: 'Otvet',
     }
   );
-  return Quiz;
+  return Otvet;
 };
