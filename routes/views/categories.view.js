@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { Category } = require('../../db/models');
 const CategoriesPage = require('../../components/CategoriesPage');
-const CategoryId = require('../../components/CategoryId');
+const CategoryId = require('../../components/CategoryItem');
 
 router.get('/:id', async (req, res) => {
   try {

@@ -1,0 +1,194 @@
+.input {
+  display: block;
+  border: none;
+  border-radius: 20px;
+  padding: 5px 8px;
+  margin: 3px;
+  color: #333;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 4px rgba(0, 0, 0, 0.1),
+  0 0 5px 1px #150f56;
+}
+
+/* кнопки */
+button {
+  /* display: inline-block; */
+  align-self: center;
+  margin: 5px;
+  width: 100px;
+  padding: 5px;
+  background: #cfcfce;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: all 0.3s ease-out;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5),
+  0 2px 2px rgba(0, 0, 0, 0.3), 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  /* Font styles */
+  text-decoration: none;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.7);
+}
+
+button:hover {
+  background: #4caf50;
+}
+
+.btn-delete:hover {
+  background: #ff3737;
+}
+
+/* карточки */
+* {
+  box-sizing: border-box;
+}
+
+.main-page img {
+  width: 70%;
+  border-radius: 350px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.themeItem {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  width: 27%;
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  border: 2px solid #f5f5f5;
+  border-radius: 10px;
+  /* background: white; */
+  font-family: 'Open Sans';
+  transition: 0.4s ease-in;
+}
+.themeItem:hover {
+  border: 1px solid #150f56a6;
+}
+
+h5 {
+  padding: 5px;
+}
+
+.themeItem img {
+  display: block;
+  align-self: center;
+  width: 90%;
+  height: 30rem;
+}
+.themesList {
+  display: flex;
+  /* background: #fafafa; */
+  align-items: flex-start;
+  padding: 15px 0;
+  flex-wrap: wrap;
+}
+.themesList h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #1c1b1b;
+  margin: 0 0 10px 0;
+}
+
+.themesList h5 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #444444;
+  margin: 0 0 10px 0;
+}
+
+.themeItem:hover .button {
+  background: #fc5a5a;
+}
+
+/* навигация */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.privet{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+li {
+  border-right: 1px solid #bbb;
+}
+li:last-child {
+  border-right: none;
+}
+
+
+
+.registration, h4, h1{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+/* nav {
+  background-color: #333; 
+  padding: 10px; 
+  height: 40px;
+
+}
+
+ul {
+  list-style-type: none; 
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+/* }
+
+li {
+  display: inline; 
+  margin-right: 20px; /
+}
+
+a {
+  text-decoration: none; 
+  color: white; 
+  font-weight: bold; 
+  font-size: 24px; 
+}
+
+a:hover {
+  color: #ffcc00; 
+} */ 
+
+
+/* инпуты */

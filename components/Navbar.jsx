@@ -3,19 +3,23 @@ const React = require('react');
 function Navbar({ user }) {
   return (
     <nav user={user}>
-      <div class='nav-wrapper'>
-        <a href='#' class='brand-logo'>
-          Logo
-        </a>
-        <ul id='nav-mobile' class='right hide-on-med-and-down'>
+      <div class="nav-wrapper">
+        <ul>
           <li>
-            <a href='/'>main</a>
+            <a href="/">Главная</a>
           </li>
           <li>
-            <a href='/categories'>category</a>
+            <a href="/categories">Выбор темы</a>
           </li>
           <li>
-            <a href='/registration'>sign-up</a>
+          {user ? (
+            <a>Привет, {user.name}! Вот тебе {user.scores} очков.</a>
+          ) : (
+            <div className='privet'>Всем привет, знатоки!</div>
+          )}
+        </li>
+          <li style={{ float: 'right' }}>
+            <a href="/registration">Регистрация</a>
           </li>
         </ul>
       </div>

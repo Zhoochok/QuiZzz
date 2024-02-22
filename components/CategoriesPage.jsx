@@ -5,8 +5,8 @@ const CategoryItem = require('./CategoryItem');
 function Categories({ title, categories }) {
   return (
     <Layout title={title}>
-      <h1>Quiz</h1>
-      <div className='container'>
+      <h2>Выберите тему:</h2>
+      <div className='themesList'>
         {categories.map((category) => (
           <CategoryItem category={category} />
         ))}
