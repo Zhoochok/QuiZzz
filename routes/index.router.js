@@ -1,6 +1,9 @@
-// router.get('/', (req, res) => {
-//   const user = res.app.locals.user;
-//   res.send(res.renderComponent(MainPage, { user }));
-// });
+const router = require('express').Router();
+//views подключения
+// const mainRouter = require('./main.router');
+const classRouter = require('./views/categories.view');
 
-// module.exports = router;
+//rout views
+router.use('./categories', classRouter);
+
+module.exports = router;

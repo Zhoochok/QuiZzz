@@ -12,7 +12,7 @@ function Navbar({ user }) {
             <a href='/'>main</a>
           </li>
           <li>
-            <a href='/books'>category</a>
+            <a href='/category'>category</a>
           </li>
           <li>
             <a href='/auth/registration'>sign-up</a>
