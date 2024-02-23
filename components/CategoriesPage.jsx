@@ -2,11 +2,11 @@ const React = require('react');
 const Layout = require('./Layout');
 const CategoryItem = require('./CategoryItem');
 
-function Categories({ title, categories }) {
+function Categories({ title, categories, user }) {
   return (
-    <Layout title={title}>
+    <Layout title={title} user={user}>
       <h2>Выберите тему:</h2>
-      <div className='themesList'>
+      <div className="themesList">
         {categories.map((category) => (
           <CategoryItem category={category} />
         ))}
