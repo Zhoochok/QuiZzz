@@ -18,6 +18,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+app.use((req, res) => {
+  res.status(404);
+  res.sendFile(__dirname + '/404.html');
+});
+
 app.listen(PORT, () => {
   console.log(`Serever has been started!`);
 });

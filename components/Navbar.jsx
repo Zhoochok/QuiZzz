@@ -1,6 +1,8 @@
 const React = require('react');
+const Layout = require('./Layout');
 
 function Navbar({ user }) {
+  // <Layout></Layout>
   return (
     <nav user={user}>
       <div class="nav-wrapper">
@@ -13,7 +15,7 @@ function Navbar({ user }) {
           </li>
           <li>
           {user ? (
-            <a>Привет, {user.name}! Вот тебе {user.scores} очков.</a>
+            <a>Привет, {user.name}! Удачи!</a>
           ) : (
             <div className='privet'>Всем привет, знатоки!</div>
           )}
