@@ -10,6 +10,8 @@ function Layout({ title, children, user }) {
         <link rel='stylesheet' href='/css/reset.css' />
 
         <script src='/js/script.js' />
+        <script src='/js/result.js' />
+
         {/* <script defer src='/scripts/product.js' /> */}
       </head>
       <body>

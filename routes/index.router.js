@@ -10,8 +10,8 @@ const authApiRouter = require('./api/auth.api.router');
 //rout views
 router.use('/', mainRouter);
 router.use('/categories', classRouter);
-// router.use('/prizes', prizeRouter);
 router.use('/registration', authRouter);
+// router.use('/prizes', prizeRouter);
 
 //api
 router.use('/api', authApiRouter)

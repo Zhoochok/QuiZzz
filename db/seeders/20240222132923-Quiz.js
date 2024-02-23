@@ -64,6 +64,7 @@ module.exports = {
         },
         {
           categoryId: 2,
+
           question: 'Кем Саша из банды Бобров приходится Никите из банды Буйволов?',
           image: 'https://i.gifer.com/J1Ek.gif',
           createdAt: new Date(),
