@@ -35,6 +35,20 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
+          categoryId: 1,
+          question: 'С каким акцентом мычат коровы?',
+          image: 'https://oir.mobi/uploads/posts/2021-05/1620932617_3-oir_mobi-p-zadumchivaya-obezyana-zhivotnie-krasivo-fo-6.jpg',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          categoryId: 1,
+          question: 'Покупателем взрывчатых веществ № 1 в мире являются военные США. Кто является №2 ??',
+          image: 'https://snob.ru/indoc/attachments/snob2/e0/42/e0421e370c72bf8ce6aba22eeebfdfac81392b02c45acadf89364e807ad844fd.jpg',
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
           categoryId: 2,
           question: 'Консоль...?',
           image: 'https://ornitoterapiya.ru/wp-content/uploads/obezyana-14.jpg',
