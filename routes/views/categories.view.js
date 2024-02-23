@@ -11,11 +11,10 @@ router.get('/:id', async (req, res) => {
     console.log(id);
     const category = await Category.findOne({ where: { id } });
     const quize = await Quiz.findOne({
-      where: { id },
+      where: { categoryId: category.id },
       include: { model: Otvet },
     });
     console.log(quize);
-    // const ott = await Otvet.findAll({ where: { id } });
     const document = res.renderComponent(CategoryId, {
       quize,
       category,
@@ -25,6 +24,30 @@ router.get('/:id', async (req, res) => {
     res.status(500).json({ error: message });
   }
 });
+
+router.get('/:id/:questionId', async (req, res) => {
+  try {
+    const { id, questionId } = req.params;
+    console.log(id);
+
+    const category = await Category.findOne({ where: { id } });
+    const quize = await Quiz.findOne({
+      where: { categoryId: category.id, id: questionId },
+      include: { model: Otvet },
+    });
+    console.log(quize);
+    const document = res.renderComponent(CategoryId, {
+      quize,
+      category,
+    });
+    res.send(document);
+  } catch ({ message }) {
+    res.status(500).json({ error: message });
+  }
+});
+
+// router.get()
+
 router.get('/', async (req, res) => {
   try {
     const categories = await Category.findAll();
@@ -39,6 +62,3 @@ router.get('/', async (req, res) => {
 });
 
 module.exports = router;
-
-
-

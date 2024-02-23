@@ -1,5 +1,9 @@
 // const formAddProduct = document.querySelector('.productAddForm');
-// const container = document.querySelector('.productCard');
+const container = document.querySelector('.category');
+
+const i = 1
+
+
 
 // if (formAddProduct) {
 //   formAddProduct.addEventListener('submit', async (event) => {
@@ -28,21 +32,20 @@
 //   });
 // }
 
-// if (container) {
-//   // повесили клик на большой контейнер
-//   container.addEventListener('click', async (event) => {
-//     // нашли все кнопки удалить
-//     if (event.target.classList.contains('btn-delete')) {
-//       // здесь карточка на которую нажали,
-//       const card = event.target.closest('.cardItem');
-//       //внимание на регистр и на каком уровне он расположен
-//       const { id } = card.dataset;
-//       const res = await fetch(`/product/${id}`, { method: 'DELETE' });
-//       const data = await res.json();
+if (container) {
+  // повесили клик на большой контейнер
+  container.addEventListener('click', async (event) => {
+    // нашли все кнопки удалить
+    if (event.target.classList.contains('btn-next')) {
+      // здесь карточка на которую нажали,
+      //внимание на регистр и на каком уровне он расположен
+      const { id } = card.dataset;
+      const res = await fetch(`/categories/${id}`);
+      const data = await res.json();
 
-//       if (data.message === 'success') {
-//         card.remove();
-//       }
-//     }
-//   });
-// }
+      if (data.message === 'success') {
+        card.remove();
+      }
+    }
+  });
+}
